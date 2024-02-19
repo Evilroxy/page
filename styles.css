@@ -1,0 +1,127 @@
+@keyframes test {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: "Exorcista";
+  src: url("Exorcista_-Jed_40.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000000;
+  background-image: url(/public/IMG_0858.webp);
+  font-family: "Exorcista", sans-serif;
+  transition: all 500ms;
+  animation: test 1.5s;
+}
+
+.eyes {
+  position: absolute;
+  top: 20%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.eye1 {
+  width: 240px;
+  height: 120px;
+  background: #191919;
+  display: inline-block;
+  margin: 40px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50% / 0 100%;
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px -14px 50px 30px rgba(0, 0, 0, 0.19);
+}
+
+.eye2 {
+  width: 240px;
+  height: 120px;
+  background: #191919;
+  display: inline-block;
+  margin: 40px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50% / 100% 0;
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px -14px 50px 30px rgba(0, 0, 0, 0.19);
+}
+
+.ball {
+  width: 90px;
+  height: 90px;
+  background: #0d130c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.eyeball {
+  width: 25px;
+  height: 80px;
+  background: #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 70%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#roxy-btn {
+  margin-top: 22%;
+  display: block;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  font-family: "Exorcista", sans-serif;
+  font-size: 70px;
+}
+
+#roxy-btn:hover {
+  background-color: #333;
+  transition: background-color 0.5s ease;
+}
+
+#links-container.hidden {
+  display: none;
+}
+#links-container {
+  margin-top: 18%;
+}
+
+#links-container a {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  font-family: "Exorcista", sans-serif;
+  transition: background-color 0.3s ease;
+  font-size: 50px;
+}
+
+#links-container a:hover {
+  background-color: #333;
+}
