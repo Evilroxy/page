@@ -6,7 +6,7 @@ document.onmousemove = function () {
   for (let i = 0; i < 2; i++) {
     balls[i].style.left = x;
     balls[i].style.top = y;
-    balls[i].style.transform = `translate(-${x}, -${y})`;
+    balls[i].style.transform = "translate(-" + x + ",-" + y + ")";
   }
 };
 
@@ -16,6 +16,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   roxyBtn.addEventListener("click", function () {
     linksContainer.classList.toggle("hidden");
-    roxyBtn.style.display = "none"; // Masque le bouton Roxy après un clic
+    roxyBtn.style.display = "none"; 
   });
 });
+
+let easteregg1 = document.querySelector('.easterEgg')
+
+easteregg1.addEventListener('click', () => {
+  const img = document.createElement('img')
+  img.classList.add('pinkie')
+  img.setAttribute('src', "public/pinkie.webp")
+  document.body.appendChild(img)
+  setTimeout(() => {
+    img.remove()
+  }, 2000);
+} )

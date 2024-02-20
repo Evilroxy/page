@@ -6,6 +6,14 @@
     opacity: 1;
   }
 }
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
 @font-face {
   font-family: "Exorcista";
@@ -39,7 +47,7 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 50% / 0 100%;
-  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px -14px 50px 30px rgba(0, 0, 0, 0.19);
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 4px 1px 34px 16px rgba(0, 0, 0, 0.51);
 }
 
 .eye2 {
@@ -51,7 +59,8 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 50% / 100% 0;
-  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px -14px 50px 30px rgba(0, 0, 0, 0.19);
+
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 4px 1px 34px 16px rgba(0, 0, 0, 0.51);
 }
 
 .ball {
@@ -94,11 +103,13 @@ body {
   background-color: #000;
   font-family: "Exorcista", sans-serif;
   font-size: 70px;
+  transition: all 0.5s ease-in-out;
 }
 
 #roxy-btn:hover {
   background-color: #333;
-  transition: background-color 0.5s ease;
+  font-size: 80px;
+  transition: all 0.5s ease-in-out;
 }
 
 #links-container.hidden {
@@ -120,8 +131,29 @@ body {
   font-family: "Exorcista", sans-serif;
   transition: background-color 0.3s ease;
   font-size: 50px;
+  transition: all 0.5s ease-in-out;
 }
 
 #links-container a:hover {
   background-color: #333;
+  font-size: 60px;
+  transition: all 0.5s ease-in-out;
+}
+
+.easterEgg {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.pinkie {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeOut 2s;
 }
