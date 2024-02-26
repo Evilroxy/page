@@ -31,3 +31,4 @@ easteregg1.addEventListener('click', () => {
     img.remove()
   }, 2000);
 } )
+
